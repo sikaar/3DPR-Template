@@ -141,7 +141,7 @@
           </a-circle></a-circle>
     <!-- Button Set -->
 
-          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('https://www.youtube.com/watch?v=7WNRaBAJ0nE&')">          
+          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('https://www.youtube.com/watch?v=KbSPPFYxx3o')">          
         <a-entity text="width: 2; color: #ffffff; value: Video; align: center" background="color: #ffffff"></a-entity></a-circle>
 
        <!-- 
