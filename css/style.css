@@ -1,0 +1,139 @@
+/*:root {
+  --maincolor: #f39c12;
+  --2ndcolor: #f39c12;
+}*/
+
+ @font-face { 
+  font-family:"OracleSansVF";
+  src:url("../fonts/OracleSansVF.woff2") format("woff2");
+} 
+
+* {
+  font-family: OracleSansVF; 
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+}
+#text{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  font-size: 1.5vw;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+.button {
+  background-color: var(--maincolor);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: min(1.8vw, 28px);
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.body {
+   font-size: 2.5vw; 
+}
+button {
+  background-color: var(--maincolor);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: min(1.8vw, 28px);
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+/* adding the menu */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sidebar a,p {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: min(1.6vw, 24px);
+  color: #E1D8CA;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: min(1.6vw, 24px);
+  margin-left: 50px;
+}
+.openbtn {
+  font-size: min(1.8vw, 28px);
+  cursor: pointer;
+  background-color: var(--maincolor);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn:hover {
+  background-color: #444;
+}
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  position: fixed; 
+  bottom: 10px; 
+  width:100%;
+  text-align: left;
+  z-index: 1
+}
+h1 {
+      font-size: 3.7vw;
+    }
+.content {
+  display: none;
+  overflow: hidden;
+}
+
+.collapsible {
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
