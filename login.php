@@ -23,7 +23,7 @@
     <?php
       if(isset($_POST['submit'])){
         $username = $_POST['username']; $password = $_POST['password'];
-        if( $password === 'champion2021'){
+        if( $password === '3DPR2021'){
           $_SESSION['login'] = true; header('LOCATION:index.php?wt.z_email='.$username); die();
         } {
           echo "<div class='alert alert-danger'>Email and Password do not match.</div>";
