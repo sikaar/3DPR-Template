@@ -5,7 +5,7 @@
     }
 ?>
 <!DOCTYPE html>
-<html style="--maincolor: #f39c12; --2ndcolor: #f39c12;">
+<html style="--maincolor: #00bbbb; --2ndcolor: #00bbbb;">
   <head>
     <meta charset="utf-8">
     <title>XD 3DPR VMO2</title>
@@ -141,7 +141,7 @@
           </a-circle></a-circle>
     <!-- Button Set -->
 
-          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('https://www.youtube.com/watch?v=ZCbUoFllo3s')">          
+          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('https://www.youtube.com/watch?v=7WNRaBAJ0nE&')">          
         <a-entity text="width: 2; color: #ffffff; value: Video; align: center" background="color: #ffffff"></a-entity></a-circle>
 
        <!-- 
