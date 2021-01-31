@@ -46,6 +46,9 @@
   </div>
       <p class="collapsible">Options</p>
       <div class="content">
+      <a href="#" id="myEnterVRButton">
+        Enter VR Mode (Oculus only)
+      </a>
       <a href="#" onclick="on(welcometext);">
         Show Instructions
       </a>
@@ -60,7 +63,7 @@
 </div>
 <!-- A SCENE -->
 
-<a-scene vr-mode-ui="false" cursor="rayOrigin: mouse">
+<a-scene vr-mode-ui="enterVRButton: #myEnterVRButton;" cursor="rayOrigin: mouse">
   
   <a-assets>
   
@@ -116,7 +119,7 @@
 		<a-entity class="OPANEL" gltf-model="#opanel" opanel-component position="0 -1.15 0" scale="1.1 0.5 1.1" rotation="90 0 0"></a-entity>
  
     <!-- Floor Anchor -->
-              <a-circle class="anchor" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
+              <a-circle class="anchor collidable" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
            <a-circle radius="0.4" position="0 0 -0.02" color="white" opacity="0.4" rotation="0 0 0">           
           </a-circle></a-circle>
@@ -129,7 +132,7 @@
 
      <a-entity class="OPANEL" gltf-model="#opanel" opanel-component position="0 -1.15 0" scale="1.1 0.5 1.1" rotation="90 0 0"></a-entity>
     <!-- Floor Anchor -->
-              <a-circle class="anchor" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
+              <a-circle class="anchor collidable" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
            <a-circle radius="0.4" position="0 0 -0.02" color="white" opacity="0.4" rotation="0 0 0">           
           </a-circle></a-circle>
@@ -160,7 +163,7 @@
      
      	<a-entity class="OPANEL" gltf-model="#opanel" opanel-component position="0 -1.15 0" scale="1.1 0.5 1.1" rotation="90 0 0"></a-entity>
     <!-- Floor Anchor -->
-              <a-circle class="anchor" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
+              <a-circle class="anchor collidable" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
            <a-circle radius="0.4" position="0 0 -0.02" color="white" opacity="0.4" rotation="0 0 0">           
           </a-circle></a-circle>
@@ -173,7 +176,7 @@
      <a-plane class="frame" material="color: grey" height="1.77" width="3.23" position="0 0.25 0.16" rotation="0 0 0" ></a-plane>
 			<a-entity class="OPANEL" gltf-model="#opanel" opanel-component position="0 -1.15 0" scale="1.1 0.5 1.1" rotation="90 0 0"></a-entity>
     <!-- Floor Anchor -->
-              <a-circle class="anchor" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
+              <a-circle class="anchor collidable" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
            <a-circle radius="0.4" position="0 0 -0.02" color="white" opacity="0.4" rotation="0 0 0">           
           </a-circle></a-circle>
@@ -186,7 +189,7 @@
      <a-plane class="frame" material="color: grey" height="1.77" width="3.23" position="0 0.25 0.16" rotation="0 0 0" ></a-plane>
 			<a-entity class="OPANEL" gltf-model="#opanel" opanel-component position="0 -1.15 0" scale="1.1 0.5 1.1" rotation="90 0 0"></a-entity>
     <!-- Floor Anchor -->
-          <a-circle class="anchor" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
+          <a-circle class="anchor collidable" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
            <a-circle radius="0.4" position="0 0 -0.02" color="white" opacity="0.4" rotation="0 0 0">           
           </a-circle></a-circle> 
@@ -199,7 +202,7 @@
      <a-plane class="frame" material="color: grey" height="1.77" width="3.23" position="0 0.25 0.16" rotation="0 0 0" ></a-plane>
 		<a-entity class="OPANEL" gltf-model="#opanel" opanel-component position="0 -1.15 0" scale="1.1 0.5 1.1" rotation="90 0 0"></a-entity>
     <!-- Floor Anchor -->
-           <a-circle class="anchor" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
+           <a-circle class="anchor collidable" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
            <a-circle radius="0.4" position="0 0 -0.02" color="white" opacity="0.4" rotation="0 0 0">           
           </a-circle></a-circle>
@@ -331,11 +334,11 @@
  <a-entity id="slideshow" position="9.8 3 0" rotation="0 -90 0">
       <a-plane id="background" class="poster" material="src: #001;" position="0 0 0.2" height="4.5" width="8" ></a-plane>
         <a-plane color="black" position="0 0 0" height="4.9" width="8.4" rotation="0 0 0"  ></a-plane>
-      <a-triangle id ="previous" position="-4.5 0 0.03" rotation ="0 0 90" colorize></a-triangle>
-      <a-triangle id ="next" position="4.5 0 0.03" rotation ="0 0 -90" colorize></a-triangle>
+      <a-triangle id ="previous" class="collidable"  position="-4.5 0 0.03" rotation ="0 0 90" colorize></a-triangle>
+      <a-triangle id ="next" class="collidable"  position="4.5 0 0.03" rotation ="0 0 -90" colorize></a-triangle>
    
      <!-- Floor Anchor -->
-              <a-circle class="anchor" position="0.2 -2.9 5" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
+              <a-circle class="anchor collidable" position="0.2 -2.9 5" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
            <a-circle radius="0.4" position="0 0 -0.02" color="white" opacity="0.4" rotation="0 0 0">           
           </a-circle></a-circle>
@@ -356,6 +359,8 @@
   
   <!-- the camera -->
   <a-entity id="rig" position="-6.8 0 0" rotation="0 -90 0" movement-controls="constrainToNavMesh: true" >
+	<a-entity oculus-touch-controls="hand: right" laser-controls="hand: right" raycaster="objects: .collidable;interval:5" line="color: #149ca3; opacity: 0.5"></a-entity>
+  <a-entity oculus-touch-controls="hand: left" laser-controls="hand: left" raycaster="objects: .collidable;interval:5" line="color: #149ca3; opacity: 0.5"></a-entity>
       <a-entity camera id="thecamera" look-controls position="0 1.6 0" >
       <!-- if webcam required 
         <a-entity id="thewebcam" visible="false">
