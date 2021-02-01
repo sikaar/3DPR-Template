@@ -41,7 +41,7 @@ AFRAME.registerComponent('colorize', {
     init: function(){
 
     var thecolor = getComputedStyle(document.documentElement).getPropertyValue('--2ndcolor').toString();
-    console.log("thecolor =" + typeof thecolor + thecolor);
+    //console.log("thecolor =" + typeof thecolor + thecolor);
     //#f39c12 thecolor.toString();
     const clr = parseInt ( thecolor.replace("#","0x"), 16 );
 
@@ -51,5 +51,26 @@ AFRAME.registerComponent('colorize', {
     }
 
 });
+
+AFRAME.registerComponent('thumbstick-logging',{
+  init: function () {
+    this.el.addEventListener('thumbstickmoved', this.logThumbstick);
+  },
+  logThumbstick: function (evt) {
+
+    let controls = document.querySelector('#thecamera').components['look-controls'];
+    controls.pitchObject.rotation.x = 0;
+
+    if (evt.detail.x < -0.95) { 
+    controls.yawObject.rotation.y -= degrees_to_radians(RotationAngle); 
+    console.log("left");
+     }
+    if (evt.detail.x > 0.95) { 
+    console.log("right");
+    controls.yawObject.rotation.y += degrees_to_radians(RotationAngle);  
+    }
+  }
+});
+
 
                         
