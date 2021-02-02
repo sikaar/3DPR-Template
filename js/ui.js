@@ -1,12 +1,12 @@
 //Overlay Handler
-var welcometext= "<h1>Welcome to </h1> <img src='./textures/logo.png' style='width:100%;height: auto;max-width: 300px;'/><br> <table><tr> <td align='center' width=25%><img src='./img/drag-and-drop.png' width=50%/></td><td align='center' width=25%><img src='./img/keys.png' width=50%/></td><td align='center' width=25%><img src='./img/menu.png' width=50%/></td><td align='center' width=25%><img src='./img/nextprevious.png' width=50%/></td></tr><tr> <td align='center' width=25%>You can move the view by dragging the the mouse</td><td align='center' width=25%>Move in the room by pressing the arrows keys</td><td align='center' width=25%>Use the menu on the bottom left to be teleported</td><td align='center' width=25%>Click on the next and previous arrows beside the slidedeck</td></tr></table><br><br><button class='button'> Get Started</button><p style='font-size:4px; color:white'>by <a style='text-decoration: none;color: white' href='https://xrlab.ddns.net'>XRlab</a></p>";
-var content="<iframe width='560' height='315' src='https://www.youtube.com/embed/ZCbUoFllo3s' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+var welcometext= document.getElementById("text").innerHTML; 
+var content="<iframe class='iframe' width='560' height='315' src='https://www.youtube.com/embed/ZCbUoFllo3s' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
 
 function on(sometext) {
   document.getElementById("overlay").style.display = "block";
   if (sometext.includes("youtube.com/"))
     {
-   document.getElementById("text").innerHTML= "<iframe width='800' height='450' src='" + sometext.replace('/watch?v=','/embed/') + "' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";     
+   document.getElementById("text").innerHTML= "<iframe class='iframe' width='800' height='450' src='" + sometext.replace('/watch?v=','/embed/') + "' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";     
     }else if(sometext.includes(".pdf"))
     {
    document.getElementById("text").innerHTML= "<div class='container'><iframe class='responsive-iframe' src='" + sometext.replace('http://','https://') + "'>This browser does not support PDFs. Please download the PDF to view it: <a href='"+ sometext.replace('http://','https://') +"'>Download PDF</a></iframe></div>";     
@@ -22,6 +22,7 @@ function on(sometext) {
 
 function off() {
   document.getElementById("overlay").style.display = "none";
+  stopVideo();
 }
 on(welcometext);
 // Handling the menu
@@ -38,13 +39,21 @@ function closeNav() {
 
 // Playing the videos - workaround for CORS policy 
 
-    function startVideo(){
+function startVideo(){
         var Z=document.querySelectorAll('.videos');
         Array.from(Z).forEach(node => {
         node.play();
         });
     };
 
+//Stoping videos in iframe
+function stopVideo() {
+  var iframe = document.querySelector( ".iframe");
+  if ( iframe ) {
+    var iframeSrc = iframe.src;
+    iframe.src = iframeSrc;
+  }
+};
 
 // slidedeck handler
 

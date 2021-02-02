@@ -35,6 +35,44 @@
                             })
                         };
 
+/*var therotation=0;
+
+ AFRAME.components["look-controls"].Component.prototype.updateOrientation = function () {
+    var poseMatrix = new THREE.Matrix4();
+
+    return function () {
+      var object3D = this.el.object3D;
+      var pitchObject = this.pitchObject;
+      var yawObject = this.yawObject;
+      var pose;
+      var sceneEl = this.el.sceneEl;
+
+      // In VR mode, THREE is in charge of updating the camera pose.
+      if (sceneEl.is('vr-mode') && sceneEl.checkHeadsetConnected()) {
+        // With WebXR THREE applies headset pose to the object3D matrixWorld internally.
+        // Reflect values back on position, rotation, scale for getAttribute to return the expected values.
+        if (sceneEl.hasWebXR) {
+          pose = sceneEl.renderer.xr.getCameraPose();
+          if (pose && the rotation==0 ) {
+            poseMatrix.elements = pose.transform.matrix;
+            poseMatrix.decompose(object3D.position, object3D.rotation, object3D.scale);
+          }else if(pose && the rotation !=0 ) {
+            poseMatrix.elements = pose.transform.matrix;
+
+            poseMatrix.decompose(object3D.position, object3D.rotation, object3D.scale);
+          }
+        }
+        return;
+      }
+
+      this.updateMagicWindowOrientation();
+
+      // On mobile, do camera rotation with touch events and sensors.
+      object3D.rotation.x = this.magicWindowDeltaEuler.x + pitchObject.rotation.x;
+      object3D.rotation.y = this.magicWindowDeltaEuler.y + yawObject.rotation.y;
+      object3D.rotation.z = this.magicWindowDeltaEuler.z;
+    };
+  }*/
 
 AFRAME.registerComponent('colorize', {
   dependencies: ['material'],
@@ -58,7 +96,9 @@ AFRAME.registerComponent('thumbstick-logging',{
   },
   logThumbstick: function (evt) {
 
-    let controls = document.querySelector('#thecamera').components['look-controls'];
+     var RotationAngle=10;
+
+    /*let controls = document.querySelector('#thecamera').components['look-controls'];
     controls.pitchObject.rotation.x = 0;
 
     if (evt.detail.x < -0.95) { 
@@ -69,6 +109,15 @@ AFRAME.registerComponent('thumbstick-logging',{
     console.log("right");
     controls.yawObject.rotation.y += degrees_to_radians(RotationAngle);  
     }
+*/
+if (evt.detail.x < -0.95 || evt.detail.x > 0.95) {
+  therotation=evt.detail;
+
+}else{
+  therotation=0;
+}
+
+
   }
 });
 
