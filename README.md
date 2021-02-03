@@ -16,8 +16,17 @@ $sudo chmod 777 /var/www/html<br/>
 And just to be sure the firewall is not an issue allow it for port 22<br/>
 $ sudo firewall-cmd --permanent --add-port=22/tcp<br/>
 $ sudo firewall-cmd --reload<br/>
-Then simply upload to the /var/www/html folder the content of this repository and VOILA :)
+Then simply upload to the /var/www/html folder the content of this repository and VOILA :)<br/><br/>
 
+If you need also to enable https :<br/>
+1) run certbot for apache :<br/>
+2) open firewall for port 443:<br/>
+$ sudo firewall-cmd --permanent --add-port=22/tcp<br/>
+$ sudo firewall-cmd --reload<br/>
+
+02/02/2021 - minor updates<br/>
+* video played in iframe optimisation
+* Splash screen to be controlled from index.html
 
 31/01/2021 - First Release<br/><br/>
 * VR mode supported for Quest
