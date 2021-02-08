@@ -1,6 +1,6 @@
 # 3DPR-Template<br/>
 
-<img src="/img/Capture.PNG" width="300px" />
+<img align="center" src="/img/Capture.PNG" width="300px" />
 
 3DPR is adding a new dimension to your presentation.<br/>
 <b>Because we cannot move around anymore (due to COVID), It does not mean all our presentations need to be flat</b><br/>
