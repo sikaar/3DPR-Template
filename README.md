@@ -4,7 +4,8 @@
 
 3DPR is adding a new dimension to your presentation.<br/>
 <b>Because we cannot move around anymore (due to COVID), It does not mean all our presentations need to be flat</b><br/>
- try the demo here : https://xrlab.ddns.net/3DPR-Template/ <br/><br/>
+ try the demo here : https://xrlab.ddns.net/3DPR-Template/ <br/>
+ or here for the circular room : https://xrlab2.ddns.net/3DPR-Template/index3.html<br/>
 
 3DPR is based on the Aframe Framework, along with the Aframe-extra components.<br/>
 Other version have been built leveraging NAF component in order to add networking capabilities.<br/><br/>
