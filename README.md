@@ -24,6 +24,10 @@ If you need also to enable https to avoid the sensors requesting it alert messag
 $ sudo firewall-cmd --permanent --add-port=443/tcp<br/>
 $ sudo firewall-cmd --reload<br/>
 
+08/02/2021 - minor updates <br/>
+* Adding a second room ( index2.html )<br/>
+* minor fixes to ui.js ( better handlong of embedded youtube videos)<br/>
+
 02/02/2021 - minor updates<br/>
 * video played in iframe optimisation
 * Splash screen to be controlled from index.html
