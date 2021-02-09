@@ -14,6 +14,11 @@ You can then either deploy it on a online editor like codepen or glitch (example
 Or host it on a cloud provider like Oracle Cloud Infrastructure,  for free: https://www.oracle.com/fr/cloud/free/ <br/>
 Find below the steps to create a webserver on Oracle Cloud : https://docs.oracle.com/en-us/iaas/developer-tutorials/tutorials/apache-on-oracle-linux/01-summary.htm <br/><br/>
 
+09/02/2021 - minor updates<br/>
+* ui enhancements - auto close navigation when selecting a ne panel to teleport to<br/>
+* fixing the aframe editor<br/>
+* Navmesh for circular rooms<br/>
+
 08/02/2021 - minor updates <br/>
 * Adding a second room ( index2.html )<br/>
 * minor fixes to ui.js ( better handlong of embedded youtube videos)<br/>
