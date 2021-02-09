@@ -124,7 +124,7 @@
  <!-- 3D assets - keep it as limited as possible -->
     <a-asset-item id="logo" src="./3DModels/xrlablogo.gltf"></a-asset-item>
     <a-asset-item id="opanel" src="./3DModels/otag.gltf"></a-asset-item>
-    <a-asset-item id="3DNavMesh" src="./3DModels/navmesh.gltf"></a-asset-item>
+    <a-asset-item id="3DNavMesh" src="./3DModels/navmesh circle.gltf"></a-asset-item>
     <a-mixin id="arc" geometry="primitive: torus; arc: 180; radius: 3.5; radiusTubular : 0.05" material="color: white"></a-mixin>
     
 <!-- Textures -->    
@@ -305,7 +305,7 @@
 <!-- Floor -->
 <a-entity id="groundfloor">
 <!-- Floor - the Navmesh is here to avoid the user going through walls and panels -->
-      <a-circle radius="9" position="0 -0.1 0" scale="1 1 0.6" visible="false" nav-mesh></a-circle> 
+      <a-entity gltf-model="#3DNavMesh" position="0 0.1 0" scale="20 1 19" visible="false" nav-mesh></a-entity>
       <a-plane id="floor" material="src: #floortexture; repeat: 6 6" height="24.4" width="24.4" rotation="-90 0 0" shadow="receive :true"></a-plane>
       <a-plane position="0 0.05 0" width=3 height=1.5 material="src: #floorlogo;" rotation="-90 0 0" opacity=0.9></a-plane>
 </a-entity>
