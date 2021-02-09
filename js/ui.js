@@ -110,7 +110,7 @@ function showtextureid(isVisible)
   }
 
 
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("collapsible_ui");
 var i;
 
 for (i = 0; i < coll.length; i++) {

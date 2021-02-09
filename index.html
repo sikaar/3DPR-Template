@@ -48,36 +48,36 @@
 <!-- Side Menu -->
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <p class="collapsible">Navigation</p>
+    <p class="collapsible_ui">Navigation</p>
     <div class="content">
-    <a href="#" onclick="movetoPanel('#slideshow')">
+    <a href="#" onclick="movetoPanel('#slideshow');closeNav()">
         Pitch Deck
     </a>
-    <a href="#" onclick="movetoPanel('#Panel1')">
+    <a href="#" onclick="movetoPanel('#Panel1');closeNav()">
         1 - ABOUT US
     </a>
-    <a href="#" onclick="movetoPanel('#Panel2')">
+    <a href="#" onclick="movetoPanel('#Panel2');closeNav()">
         2 - PROBLEM
     </a>
-    <a href="#" onclick="movetoPanel('#Panel3')">
+    <a href="#" onclick="movetoPanel('#Panel3');closeNav()">
         3 - SOLUTION
     </a>
-    <a href="#" onclick="movetoPanel('#Panel4')">
+    <a href="#" onclick="movetoPanel('#Panel4');closeNav()">
         4 - PRODUCT
     </a>
-    <a href="#" onclick="movetoPanel('#Panel5')">
+    <a href="#" onclick="movetoPanel('#Panel5');closeNav()">
         5 - PRODUCT DETAILS
     </a>
-    <a href="#" onclick="movetoPanel('#Panel6')">
+    <a href="#" onclick="movetoPanel('#Panel6');closeNav()">
         6 - ROADMAP
     </a>
   </div>
-      <p class="collapsible">Options</p>
+      <p class="collapsible_ui">Options</p>
       <div class="content">
-      <a href="#" id="myEnterVRButton">
+      <a href="#" id="myEnterVRButton" onclick="closeNav()">
         Enter VR Mode (Oculus only)
       </a>
-      <a href="#" onclick="on(welcometext);">
+      <a href="#" onclick="on(welcometext);closeNav()">
         Show Instructions
       </a>
       <a href="#" onclick="on('Music - www.bensound.com<br/> Videos - www.pexel.com<br/> Presentation - Powerpoint Templates <br/> 3D Models - Wojciech PLUTA <br/> 3DPR - Sikaar KEITA');">
