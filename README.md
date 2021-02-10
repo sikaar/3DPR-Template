@@ -1,11 +1,12 @@
 # 3DPR-Template<br/>
+
 <p align="center">
-<img align="center" src="/img/Capture.PNG" width="400px" />
+<img src="/img/Capture.PNG" width="400px" />
 3DPR is adding a new dimension to your presentation.<br/>
 <b>Because we cannot move around anymore (due to COVID), It does not mean all our presentations need to be flat</b><br/>
  try the demo here : https://xrlab.ddns.net/3DPR-Template/ <br/>
  or here for the circular room : https://xrlab.ddns.net/3DPR-Template/index3.html<br/>
- </p>
+</p>
 <p align="center">
 3DPR is based on the Aframe Framework, along with the Aframe-extra components.<br/>
 I also built another version leveraging <a href="https://github.com/networked-aframe">NAF component</a> in order to add networking capabilities - repo to come soon<br/><br/>
