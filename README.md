@@ -19,6 +19,7 @@ Find below the steps to create a webserver on Oracle Cloud : https://docs.oracle
 
 10/02/2021 - minor updates<br/>
 * adding the <a href="https://github.com/nylki/aframe-fit-texture-component">fit-texture component</a><br/>
+* supporting keyboard num touch for moving across<br/>
 
 09/02/2021 - minor updates<br/>
 * ui enhancements - auto close navigation when selecting a ne panel to teleport to<br/>
