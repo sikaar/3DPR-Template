@@ -1,7 +1,7 @@
 # 3DPR-Template<br/>
 
 <p align="center">
-<img src="/img/Capture.PNG" width="400px" />
+<img src="/img/Capture.PNG" width="400px" /><br/>
 3DPR is adding a new dimension to your presentation.<br/>
 <b>Because we cannot move around anymore (due to COVID), It does not mean all our presentations need to be flat</b><br/>
  try the demo here : https://xrlab.ddns.net/3DPR-Template/ <br/>
