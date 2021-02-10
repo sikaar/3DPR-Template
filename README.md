@@ -34,7 +34,7 @@ Find below the steps to create a webserver on Oracle Cloud : https://docs.oracle
 * video played in iframe optimisation
 * Splash screen to be controlled from index.html
 
-31/01/2021 - First Release<br/><br/>
+31/01/2021 - First Commit<br/><br/>
 * VR mode supported for Quest
 * Dummy deck on main screen
 * 3DPR Pitch deck on panels
