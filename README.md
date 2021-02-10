@@ -9,7 +9,7 @@
 
 3DPR is based on the Aframe Framework, along with the Aframe-extra components.<br/>
 Other version have been built leveraging NAF component in order to add networking capabilities.<br/><br/>
-<img align="center" src="/img/image (20).PNG" width="300px" />
+<img align="center" src="/img/image (20).png" width="300px" />
 
 
 You can then either deploy it on a online editor like codepen or glitch (examples soon to come)<br/>
