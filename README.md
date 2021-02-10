@@ -8,7 +8,7 @@
  or here for the circular room : https://xrlab.ddns.net/3DPR-Template/index3.html<br/>
 
 3DPR is based on the Aframe Framework, along with the Aframe-extra components.<br/>
-Other version have been built leveraging NAF component in order to add networking capabilities.<br/><br/>
+I also built another version leveraging <a href="https://github.com/networked-aframe">NAF component</a> in order to add networking capabilities - repo to come soon<br/><br/>
 <img align="center" src="/img/image (20).png" width="300px" />
 
 
