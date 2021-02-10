@@ -51,6 +51,7 @@ function movetoPanel(panel)
   var X=Y.querySelector('.anchor');  
   movetonode(X);
   X=Y.querySelector('.poster');
+  if( X )
   rotatetolookat(X);
 }
 
@@ -129,5 +130,10 @@ window.addEventListener("keydown", function(e){
     { // e.g. v key
       movetoPanel('#slideshow'); 
     };
+    if(e.code == 'Space') 
+    { // e.g. v key
+      movetoPanel('#groundfloor'); 
+    };
+    
 
   });
