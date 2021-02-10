@@ -1,7 +1,7 @@
 # 3DPR-Template<br/>
-
+<p align="center">
 <img align="center" src="/img/Capture.PNG" width="300px" />
-
+</p>
 3DPR is adding a new dimension to your presentation.<br/>
 <b>Because we cannot move around anymore (due to COVID), It does not mean all our presentations need to be flat</b><br/>
  try the demo here : https://xrlab.ddns.net/3DPR-Template/ <br/>
@@ -9,8 +9,9 @@
 
 3DPR is based on the Aframe Framework, along with the Aframe-extra components.<br/>
 I also built another version leveraging <a href="https://github.com/networked-aframe">NAF component</a> in order to add networking capabilities - repo to come soon<br/><br/>
+<p align="center">
 <img align="center" src="/img/image (20).png" width="300px" />
-
+</p>
 
 You can then either deploy it on a online editor like codepen or glitch (examples soon to come)<br/>
 Or host it on a cloud provider like Oracle Cloud Infrastructure,  for free: https://www.oracle.com/fr/cloud/free/ <br/>
