@@ -85,7 +85,7 @@ function degrees_to_radians(degrees)
 
  var RotationAngle=10;
 
-  window.addEventListener("keydown", function(e){
+window.addEventListener("keydown", function(e){
     
     if(e.code == 'KeyQ') 
     { // e.g. v key
@@ -100,4 +100,34 @@ function degrees_to_radians(degrees)
     controls.pitchObject.rotation.x = 0;
     controls.yawObject.rotation.y -= degrees_to_radians(RotationAngle);  
     };
+
+    if(e.code == 'Digit1') 
+    { // e.g. v key
+      movetoPanel('#Panel1'); 
+    };
+    if(e.code == 'Digit2') 
+    { // e.g. v key
+      movetoPanel('#Panel2'); 
+    };
+    if(e.code == 'Digit3') 
+    { // e.g. v key
+      movetoPanel('#Panel3'); 
+    };
+    if(e.code == 'Digit4') 
+    { // e.g. v key
+      movetoPanel('#Panel4'); 
+    };
+    if(e.code == 'Digit5') 
+    { // e.g. v key
+      movetoPanel('#Panel5'); 
+    };
+    if(e.code == 'Digit6') 
+    { // e.g. v key
+      movetoPanel('#Panel6'); 
+    };
+    if(e.code == 'Tab') 
+    { // e.g. v key
+      movetoPanel('#slideshow'); 
+    };
+
   });
