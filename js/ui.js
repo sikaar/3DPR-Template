@@ -10,6 +10,10 @@ function on(sometext) {
     }else if(sometext.includes(".pdf"))
     {
    document.getElementById("text").innerHTML= "<div class='container'><iframe class='responsive-iframe' src='" + sometext.replace('http://','https://') + "'>This browser does not support PDFs. Please download the PDF to view it: <a href='"+ sometext.replace('http://','https://') +"'>Download PDF</a></iframe></div>";     
+    }
+    else if(sometext.includes("IFRAME"))
+    {
+   document.getElementById("text").innerHTML= "<div class='container' style='background:url(./img/loader.gif) center center no-repeat;'><iframe width='800' height='450' class='responsive-iframe' src='" + sometext.replace('IFRAME ','') + "'></iframe></div>";     
     }else if(sometext.length > 2)
     {
    document.getElementById("text").innerHTML= sometext;     
@@ -148,5 +152,10 @@ window.addEventListener("keydown", function(e){
     if(e.code == 'BracketRight') 
     { 
       gotonextslide();
+    };
+
+    if(e.code == 'Escape') 
+    { 
+      off();
     };
   });
