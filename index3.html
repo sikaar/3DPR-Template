@@ -25,8 +25,8 @@
 <div id="overlay" onclick="off();startVideo();">
   <div id="text"> 
     <h1>Welcome to </h1> 
-    <img src='./textures/logo.png' style='width:100%;height: auto;max-width: 300px;'/><br> 
-    <table>
+    <img src='./textures/logo.png' style='max-width:60%;object-fit:contain;'/><br> 
+    <table style='max-width:60%;' align='center'>
       <tr> 
         <td align='center' width=25%><img src='./img/drag-and-drop.png' width=50%/></td>
         <td align='center' width=25%><img src='./img/keys.png' width=50%/></td>
@@ -244,6 +244,9 @@
     <a-box position="0 1.4 0.3"  color="black" scale="2 0.05 0.05"   ></a-box>
     <a-box position="0 1.37 0.28"  color="white" scale="1.9 0.05 0.05"  material="emissiveIntensity: 2; emissive:#ffffff" >
     </a-box>
+    <!-- Button Set -->
+          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('IFRAME https://xrlab.ddns.net')">          
+        <a-entity text="width: 2; color: #ffffff; value: Iframe; align: center" background="color: #ffffff"></a-entity></a-circle>
     <!-- Floor Anchor -->
           <a-circle class="anchor collidable" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
@@ -263,6 +266,9 @@
     <a-box position="0 1.4 0.3"  color="black" scale="2 0.05 0.05"   ></a-box>
     <a-box position="0 1.37 0.28"  color="white" scale="1.9 0.05 0.05"  material="emissiveIntensity: 2; emissive:#ffffff" >
     </a-box>
+     <!-- Button Set -->
+          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('./pdf/Product Roadmap.pdf')">          
+        <a-entity text="width: 2; color: #ffffff; value: PDF; align: center" background="color: #ffffff"></a-entity></a-circle>
     <!-- Floor Anchor -->
            <a-circle class="anchor collidable" position="0 -1.45 2" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
@@ -354,7 +360,7 @@
       <a-plane material="src: #video2" position="-10.75 1.5 -4" height="1" width="1.5" rotation="0 70 0" ><a-plane material="color:black;" position="-0.02 0 -0.02" height="1.1" width="1.6" ></a-plane></a-plane> 
 
   <!-- room logo -->
- <a-entity id="doorlogo" position="-9.9 4 0" >
+ <a-entity id="doorlogo" position="-11.4 4 0" >
  <a-plane material="src: #roomlogo;" height="1.5" width="2" rotation="0 90 0" opacity=0.9 fit-texture></a-plane>
  </a-entity>
   

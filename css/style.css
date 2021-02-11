@@ -34,6 +34,7 @@
   color: white;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
+  width: 90%;
 }
 .button_ui {
   background-color: var(--maincolor);
@@ -136,4 +137,25 @@ h1 {
 
 .active, .collapsible_ui:hover {
   background-color: #555;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  width:100%;
+  min-width: 800px;
+  max-height: 600px;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform:scale(0.8);
+  -moz-transform:scale(0.8);
 }

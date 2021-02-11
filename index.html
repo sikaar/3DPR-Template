@@ -25,8 +25,8 @@
 <div id="overlay" onclick="off();startVideo();">
   <div id="text"> 
     <h1>Welcome to </h1> 
-    <img src='./textures/logo.png' style='width:100%;height: auto;max-width: 300px;'/><br> 
-    <table>
+    <img src='./textures/logo.png' style='max-width:60%;object-fit:contain;'/><br> 
+    <table style='max-width:60%;' align='center'>
       <tr> 
         <td align='center' width=25%><img src='./img/drag-and-drop.png' width=50%/></td>
         <td align='center' width=25%><img src='./img/keys.png' width=50%/></td>
@@ -223,8 +223,8 @@
           </a-circle></a-circle> 
 
         <!-- Button Set -->
-          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('IFRAME https://github.com/sikaar/3DPR-Template')">          
-        <a-entity text="width: 2; color: #ffffff; value: Video; align: center" background="color: #ffffff"></a-entity></a-circle>
+          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('IFRAME https://xrlab.ddns.net')">          
+        <a-entity text="width: 2; color: #ffffff; value: Iframe; align: center" background="color: #ffffff"></a-entity></a-circle>
 
   </a-entity>
   
@@ -239,6 +239,10 @@
           <a-entity text="width: 3; color: #ffffff; value: MOVE \nHERE; align: center" background="color: #ffffff"></a-entity>
            <a-circle radius="0.4" position="0 0 -0.02" color="white" opacity="0.4" rotation="0 0 0">           
           </a-circle></a-circle>
+
+        <!-- Button Set -->
+          <a-circle position="0 -0.75 0.2" radius="0.2" colorize  onclick="on('./pdf/Product Roadmap.pdf')">          
+        <a-entity text="width: 2; color: #ffffff; value: PDF; align: center" background="color: #ffffff"></a-entity></a-circle>
 
   </a-entity>
   
