@@ -67,7 +67,17 @@ function stopVideo() {
       var indexi=0;
       document.querySelector("#previous").setAttribute('visible',false);
       document.querySelector("#next").addEventListener("click", (e)=> {
-        // do stuff here.
+        gotonextslide();
+      });
+            document.querySelector("#previous").addEventListener("click", (e)=> {
+        gotopreviousslide();
+
+      });
+
+
+
+function gotonextslide()
+{
         var X=document.querySelector('#background'); 
         if(indexi <= myStringArray.length - 1  )
           {
@@ -80,9 +90,12 @@ function stopVideo() {
                 document.querySelector("#next").setAttribute('visible',false); 
               }
           }
-      });
-      document.querySelector("#previous").addEventListener("click", (e)=> {
-        // do stuff here.
+}
+
+
+
+function gotopreviousslide()
+{
         var X=document.querySelector('#background'); 
         if(indexi >= 0  )
           {
@@ -94,8 +107,8 @@ function stopVideo() {
               {
                 document.querySelector("#previous").setAttribute('visible',false);
               }
-          }
-      });
+          };
+}
 
 
 
@@ -124,3 +137,16 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+window.addEventListener("keydown", function(e){
+    if(e.code == 'BracketLeft') 
+    { 
+      gotopreviousslide();
+    };
+
+
+    if(e.code == 'BracketRight') 
+    { 
+      gotonextslide();
+    };
+  });
