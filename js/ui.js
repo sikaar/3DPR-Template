@@ -1,4 +1,5 @@
 //Overlay Handler
+var firstdisplay=true; //when displaying the splash screen the first time in the room
 var welcometext= document.getElementById("text").innerHTML; 
 
 function on(sometext) {
@@ -20,6 +21,13 @@ function on(sometext) {
 
 function off() {
   document.getElementById("overlay").style.display = "none";
+  if(firstdisplay) //when displaying the splash screen the first time in the room
+  {
+  startVideo();
+  letthemusicplay();
+  firstdisplay =false;    
+  }
+
   stopVideo();
 }
 on(welcometext);
@@ -135,6 +143,31 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// Ambient music handler
+
+var playing = false;
+var audio = document.querySelector("#music");
+var audiobutton = document.querySelector("#musicbutton");
+
+function letthemusicplay()
+{
+    if (!playing) 
+    {
+      audio.play();
+      audiobutton.innerHTML="🔇";
+    } 
+    else 
+    {
+      audio.pause();
+      audio.currentTime = 0;
+      audiobutton.innerHTML="🔈";
+    }
+      playing = !playing;
+} 
+
+
+// SLidedeck and overlay keyboard controls
 
 window.addEventListener("keydown", function(e){
     if(e.code == 'BracketLeft') 

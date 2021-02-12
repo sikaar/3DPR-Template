@@ -21,8 +21,8 @@
 </script>
   </head>
   <body>
-<!-- Overlay - on click start playing the videos in scene  -->
-<div id="overlay" onclick="off();startVideo();">
+<!-- Overlay -->
+<div id="overlay" onclick="off();">
   <div id="text"> 
     <h1>Welcome to </h1> 
     <img src='./textures/logo.png' style='max-width:60%;object-fit:contain;'/><br> 
@@ -77,17 +77,24 @@
       <a href="#" id="myEnterVRButton" onclick="closeNav()">
         Enter VR Mode (Oculus only)
       </a>
-      <a href="#" onclick="on(welcometext);closeNav()">
+      <a href="#" onclick="letthemusicplay();">
+        Play / Pause Music
+      </a>
+      <a href="#" onclick="on(welcometext);closeNav();">
         Show Instructions
       </a>
-      <a href="#" onclick="on('Music - www.bensound.com<br/> Videos - www.pexel.com<br/> Presentation - Powerpoint Templates <br/> 3D Models - Wojciech PLUTA <br/> 3DPR - Sikaar KEITA');">
+      <a href="#" onclick="on('<img src=\'./img/keyboardshortcuts.png\' style=\'max-width:80%;object-fit:contain;\'/>');closeNav();">
+        Show Keyboard Shortcuts
+      </a>
+      <a href="#" onclick="on('Music - www.bensound.com<br/> Videos - www.pexel.com<br/> Presentations & Communication - Keone BOURUMEAU <br/> 3D Models - Wojciech PLUTA <br/> Debug & Features Requests - Brian ALBERTELLI<br/> Backend - Stuart Coggins<br/> 3DPR - Sikaar KEITA');">
         Show Credits
       </a>
+
   </div>
 </div>
 
 <div id="main">
-  <button class="openbtn" onclick="openNav()">☰ Menu</button> 
+  <button class="openbtn" onclick="openNav()">☰ Menu</button> <button class="openbtn" id="musicbutton" onclick="letthemusicplay();">🔇</button> 
 </div>
 <!-- A SCENE -->
 
@@ -116,6 +123,9 @@
     <a-img class="slide" id="010" src="./slidedeck/Slide10.PNG"></a-img>
     <a-img class="slide" id="011" src="./slidedeck/Slide11.PNG"></a-img>
 
+<!--Ambient music - keep them below 2MB  -->
+    <audio id="music" src="./audio/music.mp3" preload="auto"></audio>
+
 <!-- videos to be shared aside of the doors - keep them below 2MB - 360 p resolution is fine -->
 
     <video class="videos" id="video1" src="./videos/video.mp4"  loop></video>
@@ -137,7 +147,8 @@
  
 
 
-  
+  <a-entity sound="src: #music"></a-entity>
+
  <!-- Poster Display Classic -->
   <a-entity id="Panel1" position="-7 1.5 -8" class="poster-classic" rotation="0 45 0">
 
