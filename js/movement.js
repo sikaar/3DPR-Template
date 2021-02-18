@@ -14,28 +14,16 @@
     var Z=document.querySelectorAll('.anchor');
     Array.from(Z).forEach(node => {
     node.addEventListener('click', function () {
-      //console.log(node);
       movetonode(node);
       });
     });
 
 function rotatetolookat(node)
 {
-      //console.log("Rotate To Look At");
+
       var nodeposition = new THREE.Vector3();
       nodeposition.setFromMatrixPosition(node.object3D.matrixWorld);
-
       var nodeRotation = node.parentNode.getAttribute('rotation');
-
-      //console.log("the node angle :");
-
-      //console.log(nodeRotation);
-
-      //var theangle = 90;
-      //if(nodeposition.z > -3) theangle = -90;
-      //console.log("the angle :" + theangle);
-
-
       let controls = document.querySelector('#thecamera').components['look-controls'];
       controls.pitchObject.rotation.x = 0;
       controls.yawObject.rotation.y = degrees_to_radians( nodeRotation.y + 90 );
@@ -57,7 +45,6 @@ function movetoPanel(panel)
 
 function movetonode(node)
 {
-      //console.log("Move To Node");
       var X=document.querySelector('#rig');
       var nodeposition = new THREE.Vector3();
       nodeposition.setFromMatrixPosition(node.object3D.matrixWorld);
