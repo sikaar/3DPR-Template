@@ -7,6 +7,7 @@
     <!--<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1a5f2348ffe8647e65e0c14788f5ae2bf27ed0cc/dist/aframe-master.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="//c.oracleinfinity.io/acs/account/hsj8iasxuf/js/skeita/odc.js"></script>
     <script src="./js/opanel-component.js"></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -80,6 +81,9 @@
       <a href="#" onclick="letthemusicplay();">
         Play / Pause Music
       </a>
+      <a href="#" onclick="activateWebCam();">
+        Start / Stop Webcam
+      </a>
       <a href="#" onclick="on(welcometext);closeNav();">
         Show Instructions
       </a>
@@ -127,6 +131,7 @@
 
     <video class="videos" id="video1" src="./videos/video.mp4"  loop></video>
     <video class="videos" id="video2" src="./videos/video2.mp4"  loop></video>  
+    <video id="webcam" playsinline></video>
 
 <!--Ambient music - keep them below 2MB  -->
     <audio id="music" src="./audio/music.mp3" preload="auto"></audio>
@@ -148,8 +153,17 @@
   </a-assets>
  
 
+  <!-- General Music -->
 
   <a-entity sound="src: #music;loop:true;"></a-entity>
+
+  <!-- Cloud Word Container  - specify the words you want to see after containerent="keywords:HERE PLACE YOUR WORDS WITH A SPACE BETWEEN EACH OF THEM" -->
+
+  <a-entity id='containerent' position="0 1.2 0" containerent="keywords:Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" animation="property: rotation;from : 0 0 0; to: 0 360 0; loop: true;easing: linear; dur: 50000"><a-sphere position="0 .5 0" radius="0.5" opacity = "0.2" ></a-sphere></a-entity>
+
+   <!-- XRLAB logo ;)   -->
+  
+   <a-entity id="xrlablogo" gltf-model="#logo" position="0 7 0" scale="0.3 0.3 0.3" animation="property: rotation;from : 0 0 0; to: 0 360 0; loop: true;easing: linear; dur: 10000" onclick="window.open('https://xrlab.ddns.net','_self')"></a-entity>
 
  <!-- Poster Display Classic -->
   <a-entity id="Panel1" position="-6 1.5 -5" class="poster-classic"> 
@@ -277,10 +291,6 @@
       <a-box class="highbar" position="-10.1 6 0"  color="white" scale="0.1 .2 15"  material="emissiveIntensity: 1; emissive:#ffffff" ></a-box>
       <a-box class="highbar" position="10.1 6 0"  color="white" scale="0.1 .2 15" material="emissiveIntensity: 1; emissive:#ffffff"  ></a-box>
 
- <!-- XRLAB logo ;)   -->
-  
-  <a-entity id="xrlablogo" gltf-model="#logo" position="0 7 0" scale="0.3 0.3 0.3" animation="property: rotation;from : 0 0 0; to: 0 360 0; loop: true;easing: linear; dur: 10000" onclick="window.open('https://xrlab.ddns.net','_self')"></a-entity>
-
 
     <!-- Wall Lights -->
   
@@ -386,6 +396,12 @@
         <a-plane color="black" position="0 0 0" height="4.9" width="8.4" rotation="0 0 0"  ></a-plane>
       <a-triangle id ="previous" class="collidable"  position="-4.5 0 0.03" rotation ="0 0 90" colorize></a-triangle>
       <a-triangle id ="next" class="collidable"  position="4.5 0 0.03" rotation ="0 0 -90" colorize></a-triangle>
+
+
+    <!-- MainScreen Webcam Overlay-->
+    <a-entity id="thewebcam2" position="0 0 0.5" visible="false">>
+      <a-plane material="src: #webcam" position="0 0 0" height="4.9" width="8.4" rotation="0 0 0"  ></a-plane>
+    </a-entity>
    
      <!-- Floor Anchor -->
               <a-circle class="anchor collidable" position="0.2 -2.9 5" radius="0.3" color="grey" opacity="0.6" rotation="-90 0 0">
@@ -412,11 +428,9 @@
 	<a-entity oculus-touch-controls="hand: right" laser-controls="hand: right" raycaster="objects: .collidable;interval:5" line="color: #149ca3; opacity: 0.5"></a-entity>
   <a-entity oculus-touch-controls="hand: left" laser-controls="hand: left" raycaster="objects: .collidable;interval:5" line="color: #149ca3; opacity: 0.5" thumbstick-logging></a-entity>
       <a-entity camera id="thecamera" look-controls position="0 1.6 0" >
-      <!-- if webcam required 
         <a-entity id="thewebcam" visible="false">
             <a-circle material="src: #webcam" radius="0.2" position="1 0.5 -1"></a-circle>
         <a-circle radius="0.25" position="1.1 0.55 -1.1" animation="property: opacity; from:0; to:1; dir: alternate; loop: true; dur: 1000;" material="color: white; emissive: #FFFFFF; emissiveIntensity: 0.3"></a-circle>
-      -->
           </a-entity>
       </a-entity>
   </a-entity>
@@ -424,5 +438,6 @@
   <div class="a-loader-title" style="display: none;">XRLAB 3DPR</div></a-scene>
   <script src="./js/ui.js"></script>
   <script src="./js/movement.js"></script>
+  <script src="./js/webcam.js"></script>
   </body>
 </html>

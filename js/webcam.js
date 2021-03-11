@@ -1,22 +1,31 @@
 // Handling webcam stream
 
-document.querySelector("#Activate_Webcam").addEventListener("click", (e)=> {
+function activateWebCam()
+{
   // do stuff here.
   var X=document.querySelector('#thewebcam');
-  if( !X.getAttribute("visible"))
+  let Y=document.querySelector('#thewebcam2');
+  if( !X.getAttribute("visible") && !Y.getAttribute("visible"))
     {
       //create the node
       X.setAttribute("visible",true );
       launchstream();
     }
+  else if( X.getAttribute("visible") && !Y.getAttribute("visible"))
+  {
+    //create the node
+    X.setAttribute("visible",false);
+    Y.setAttribute("visible",true );
+    //launchstream();
+  }
   else{
     //delete the node
       X.setAttribute("visible",false );
+      Y.setAttribute("visible",false);
     stopstream()
   }
 
-  
-});
+}
 
 function launchstream()
 {
@@ -39,3 +48,15 @@ stream.getTracks().forEach(function(track) {
 });  
 });
 };
+
+
+// keyboard controls
+
+window.addEventListener("keydown", function(e){
+  if(e.code == 'KeyC') 
+  { 
+    activateWebCam();
+  };
+
+
+});

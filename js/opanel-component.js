@@ -135,4 +135,61 @@ AFRAME.registerComponent('fit-texture', {
 
 });
 
+function addCube() {
+  var pts=[];
+  pts = randomPoint();
+    var x = pts.x;
+    var y = pts.y + Math.random();
+    var z = pts.z;
+   var pos = x.toFixed(2) + ' ' + y.toFixed(2) + ' ' + z.toFixed(2);
+return pos;
+}
+
+
+function randomPoint()
+{
+    let xt = Math.random() - 0.5;
+    let yt = Math.random() - 0.5;
+  let zt = Math.random() - 0.5;
+    var k = Math.sqrt(xt*xt + yt*yt + zt*zt);
+    while (k < 0.2 || k > 0.3)
+    {
+        xt = Math.random() - 0.5;
+        yt = Math.random() - 0.5;
+        zt = Math.random() - 0.5;
+        k = Math.sqrt(xt*xt + yt*yt + zt*zt);
+    }
+    return {'x':xt/k, 'y':yt/k, 'z':zt/k};
+}
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function getRandomSize() {
+  var size = Math.floor(Math.random() * 4) +2 ;
+  return size;
+}
+
+AFRAME.registerComponent('containerent', {
+  schema: {
+    keywords: {type: 'string', default: 'trencherman founded unreeving crystallography never bunchgrasses husk dogears afghans dakoits barrelhead informants ethics sables audacities elegies wahoos unassuageable uglily swift spire superficial'}
+  },
+  update: function () {
+    let container = this.el;
+    let thewordsstring = this.data.keywords;
+    let thewords = thewordsstring.split(" ");
+
+    for (var i=0; i<thewords.length; i++)
+{
+this.el.innerHTML += "<a-entity look-at='#rig' text='width: " + getRandomSize() + "; color: " + getRandomColor() + "; value: " + thewords[i] + "; align: center' position ='" + addCube() + "' background='color: #ffffff'></a-entity>";
+}
+  }
+});
+
 
